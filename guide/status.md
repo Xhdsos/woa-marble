@@ -31,8 +31,7 @@ Almost nothing works.
 - [ ] Gyroscope
 - [ ] Light sensor
 - [ ] Proximity
-- [ ] NFC ```NFC Tags work, other NFC related things may work too```
-
+- [ ] NFC
 
 
 
