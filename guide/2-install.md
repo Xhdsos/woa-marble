@@ -91,34 +91,11 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 ### Unassign disk letters
 > So that they don't stay there after disconnecting the device
 ```cmd
-diskpart
+mountvol y: /d
 ```
 
-#### Select the Windows volume of the phone
-> Use `list volume` to find it, replace "$" with the actual number of **WINMARBLE**
-```diskpart
-select volume $
-```
-
-#### Unassign the letter X
-```diskpart
-remove letter x
-```
-
-#### Select the ESP volume of the phone
-> Use `list volume` to find it, replace "$" with the actual number of **ESPMARBLE**
-```diskpart
-select volume $
-```
-
-#### Unassign the letter Y
-```diskpart
-remove letter y
-```
-
-#### Exit diskpart
-```diskpart
-exit
+```cmd
+mountvol x: /d
 ```
 
 ### Reboot to Android
