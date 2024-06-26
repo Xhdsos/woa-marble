@@ -55,7 +55,10 @@ This project is in an early stage, all the files here have been contributed by o
 [<img alt="n00b69" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/83274506?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/n00b69)
 [<img alt="TrustedFloppa" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/85476585?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/TrustedFloppa)
 [<img alt="Misha803" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/118528504?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Misha803)
-
+[<img alt="Kadarej" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/158618007?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Xhdsos)
+[<img alt="zxcwsurx" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/102683665?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/zxcwsurx)
+[<img alt="tagicmi" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/166647160?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/tagicmi)
+[<img alt="huananzhix79" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/173505596?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/huananzhix79)
 
 
 
