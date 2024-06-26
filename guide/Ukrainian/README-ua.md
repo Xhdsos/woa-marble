@@ -1,39 +1,39 @@
-<img align="right" src="https://raw.githubusercontent.com/Xhdsos/Port-Windows-POCO-F5-RN12T/main/marble.png" width="425" alt="Windows running on POCO F5/Redmi Note 12 Turbo">
+<img align="right" src="https://raw.githubusercontent.com/Xhdsos/woa-marble/main/guide/Ukrainian/marble.png" width="425" alt="Windows running on POCO F5/Redmi Note 12 Turbo">
 
-# Running Windows on POCO F5/Redmi Note 12 Turbo
+# Running Windows on the POCO F5/Redmi Note 12 Turbo
 
 [![telegram](https://img.shields.io/badge/chat-telegram-brightgreen.svg?logo=telegram&style=flat-square)](https://t.me/woa_marble_davinci)
 
-## Choose your language
-**English** | [`Pусский - W.I.P`](/guide/Russian/README-ru.md) | [`Українська - W.I.P`](/guide/Ukrainian/README-ua.md)
+## Виберіть вашу мову
+[`English`](/README.md) | [`Pусский`](/guide/Russian/README-ru.md) | **Українська**
 
-## ⚠️ Warning
-We're not responsible for bricked devices, missing recovery partitions, dead xiaomi factoryline ~~workers~~ cowboys, dead pmics, dead ram, dead sim cards, dead display ics, dead cpus, any xiaomi shenanigans, exploding batteries, dead cats or dogs, nuclear wars or you getting fired because you forgot to boot back in to android for the alarm.
+## ⚠️ Попередження! 
+Ми не несемо відповідальності за пошкоджені пристрої, відсутні розділи відновлення, непрацюючих ~співробітників~  xiaomi factoryline, непрацюючі pmic, непрацюючі sd-карти, непрацюючу оперативну пам'ять, непрацюючі sim-карти, непрацюючі мікросхеми дисплея, непрацюючі ІМЕІ, бабах дорогий телефончик, бабах. .
 
-This project is in an early stage, all the files here have been contributed by other users, here you will find a guide with the working files we managed to get. This is a delicate process, do it under your own risk and follow all the steps carefully.
-
-**IF YOU AREN'T COMFORTABLE MODDING YOUR PHONE OR ITS PARTITION TABLE OR YOU ARE PARANOID OF BRICKING YOUR DEVICE CLICK AWAY NOW!!! YOU HAVE BEEN WARNED, YOU ARE ON YOUR OWN IF YOU BRICK YOUR DEVICE!!! AGAIN! YOU HAVE BEEN WARNED!!!**
+Цей проект знаходиться на ранній стадії, всі файли представлені тут були надані іншими користувачами, тут ви знайдете посібник з робочими файлами, які нам вдалося отримати. Це делікатний процес, виконуйте його на свій страх і ризик і уважно дотримуйтесь всіх кроків!
 
 
-## Get started
-- [Project status](guide/status.md)
-
-- [Installation instructions](guide/1-partition.md)
-
-- [Troubleshooting](guide/troubleshooting.md)
+**ЯКЩО ВИ НЕ ХОЧЕТЕ МОДИФІКУВАТИ СВІЙ ТЕЛЕФОН АБО ЙОГО ТАБЛИЦЮ РОЗДІЛІВ, АБО ВИ БОЙТЕСЯ ОКИРПИЧИТИ СВІЙ ПРИСТРІЙ, НЕГАЙНО ПЕРЕСТАНЬТЕ ЧИТАТИ!!! ВАС ПОПЕРЕДЖИЛИ, ЩО ЯКЩО ВИ ОКИРПИЧИТЕ СВІЙ ПРИСТРІЙ ВІДПОВІДАЛЬНІСТЬ ЛЕЖИТЬ НА ВАС!!! ВАС ПОПЕРЕДЖИЛИ!!!**
 
 
-## Miscellaneous
-- [Dualboot setup](guide/dualboot.md)
+## Почнемо
+- [Статус Проекта](status-ua.md)
 
-- [Additional materials](guide/materials.md)
+- [Встановлення](1-partition-ua.md)
 
-- [Reinstall instructions](guide/reinstall.md)
-
-- [Uninstall instructions](guide/uninstall.md)
+- [Виправлення проблем](troubleshooting-ua.md)
 
 
-## Contributors
+## Інше 
+- [Налаштування дуалбута](dualboot-ua.md)
+
+- [Корисні інструкції](materials-ua.md)
+
+- [Переустановлення](reinstall-ua.md)
+
+- [Інструкція видалення](uninstall-ua.md)
+
+## Партнери 
 [<img alt="adomerlee" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/109386069?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/adomerlee)
 [<img alt="Morc" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/13377926?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/TheMorc)
 [<img alt="Icesito68" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/113939920?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/Icesito68)
@@ -59,8 +59,6 @@ This project is in an early stage, all the files here have been contributed by o
 [<img alt="zxcwsurx" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/102683665?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/zxcwsurx)
 [<img alt="tagicmi" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/166647160?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/tagicmi)
 [<img alt="huananzhix79" src="https://images.weserv.nl/?url=https://avatars.githubusercontent.com/u/173505596?v=4&w=45&fit=cover&mask=circle&maxage=7d" />](https://github.com/huananzhix79)
-
-
 
 
 
