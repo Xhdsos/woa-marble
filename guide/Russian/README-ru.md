@@ -1,4 +1,4 @@
-<img align="right" src="https://raw.githubusercontent.com/Xhdsos/Port-Windows-POCO-F5-RN12T/main/marble.png" width="425" alt="Windows running on POCO F5/Redmi Note 12 Turbo">
+<img align="right" src="https://raw.githubusercontent.com/Xhdsos/woa-marble/main/guide/Russian/marble-ru.png" width="425" alt="Windows running on POCO F5/Redmi Note 12 Turbo">
 
 # Running Windows on the POCO F5/Redmi Note 12 Turbo
 
