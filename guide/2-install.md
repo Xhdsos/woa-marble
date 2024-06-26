@@ -8,6 +8,8 @@
 - [Windows on ARM image](https://worproject.com/esd)
 
 - [Modded TWRP](-)
+  
+- [UEFI Image](-)
 
 ### Boot to TWRP recovery
 > If your recovery has been replaced by the stock recovery, flash it again using
@@ -15,65 +17,61 @@
 fastboot flash recovery path\to\twrp.img reboot recovery
 ```
 
-#### Installing WinPe
+#### Enabling mass storage mode
 
-This Guide will show you how to Install Windows PE on your Device.
+Use [Mass-Storage.zip](https://github.com/Robotix22/Mu-Qcom-Guides/files/11005130/Mass-Storage.zip) and copy it contents to a FAT32 Partition on your Device. <br />
+After that boot the UEFI Image then it enters Windows Boot Manager select `Developer Menu` -> `USB Mass Storage Mode`. <br />
 
-<table>
-<tr><th>Table of Contents</th></th>
-<tr><td>
-
-- Installing Windows PE
-    - [What's needed](#things-you-need)
-    - [Installing](#installation)
-        - [Method 1](#method-1-cust)
-            - [Preparing](#preparing-step-1)
-            - [Formating](#formating-cust-partition-step-2)
-            - [Copy Files](#copying-windows-pe-files-step-3)
-
-</td></tr> </table>
-
-## Things you need:
-
-- Windows PE (Recommended: - [WindowsPE](https://drive.google.com/file/d/1d-rGVm2Zk3-4mxaICWAz5LA3k3zIDkbA/view?usp=sharing))
-
-## Installation
-
-## Preparing (Step 1)
-
-First of we need to prepare some things before we install Windows PE on our Device. <br />
-Make sure you have an Custom Recovery installed on your Device and have ADB on your PC / Laptop. <br />
-Download Windows PE and extract the zip File somewhere, where you can reach it.
-
-## Formating Cust Partition (Step 2)
-
-We will now format the cust Partition to FAT32:
-```
-mkfs.fat -F32 -s1 /dev/block/by-name/cust
+### Diskpart
+> [!WARNING]
+> DO NOT ERASE, CREATE OR OTHERWISE MODIFY ANY PARTITION WHILE IN DISKPART!!!! THIS CAN ERASE ALL OF YOUR UFS OR PREVENT YOU FROM BOOTING TO FASTBOOT!!!! THIS MEANS THAT YOUR DEVICE WILL BE PERMANENTLY BRICKED WITH NO SOLUTION! (except for taking the device to Xiaomi or flashing it with EDL, both of which will likely cost money)
+```cmd
+diskpart
 ```
 
-## Copying Windows PE Files (Step 3)
+#### Selecting the Windows partition
+> Use `list volume` to find it, replace `$` with the actual number of **WINMARBLE**
+```diskpart
+select volume $
+```
 
-After that we copy the Windows PE Files into cust. <br />
-First mount cust with ADB Shell:
+#### Add letter to Windows
+```cmd
+assign letter x
 ```
-mkdir /cust
-mount /dev/block/by-name/cust /cust
-```
-then use `adb push` to copy all Windows PE Files to cust:
-```
-adb push <Path to Windows PE Files> /cust/
-```
-After that it should contain `sources`, `efi` and `boot`. <br />
-You have now successfully installed Windows PE.
 
+#### Selecting the ESP partition
+> Use `list volume` to find it, replace `$` with the actual number of **ESPMARBLE**
+```diskpart
+select volume $
+```
 
+#### Add letter to ESP
+```cmd
+assign letter y
+```
+
+#### Exit diskpart
+```cmd
+exit
+```
 
 ### Installing Windows
 > [!Warning]
 > DO NOT USE 24H2!!!
 
+> Replace `path\to\install.esd` with the actual path of install.esd (it may also be named install.wim)
 
+```cmd
+dism /apply-image /ImageFile:path\to\install.esd /index:6 /ApplyDir:X:\
+```
+
+> If you get `Error 87`, check the index of your image with `dism /get-imageinfo /ImageFile:path\to\install.esd`, then replace `index:6` with the actual index number of **Windows 11 Pro** in your image
+
+#### Create Windows bootloader files
+```cmd
+bcdboot X:\Windows /s Y: /f UEFI
+```
 
 #### Enabling test signing
 ```cmd
@@ -90,7 +88,41 @@ bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" recoveryenabled no
 bcdedit /store Y:\EFI\Microsoft\BOOT\BCD /set "{default}" nointegritychecks on
 ```
 
+### Unassign disk letters
+> So that they don't stay there after disconnecting the device
+```cmd
+diskpart
+```
 
+#### Select the Windows volume of the phone
+> Use `list volume` to find it, replace "$" with the actual number of **WINMARBLE**
+```diskpart
+select volume $
+```
+
+#### Unassign the letter X
+```diskpart
+remove letter x
+```
+
+#### Select the ESP volume of the phone
+> Use `list volume` to find it, replace "$" with the actual number of **ESPMARBLE**
+```diskpart
+select volume $
+```
+
+#### Unassign the letter Y
+```diskpart
+remove letter y
+```
+
+#### Exit diskpart
+```diskpart
+exit
+```
+
+### Reboot to Android
+> Hold **volume down** + **power** to force reboot your phone
 
 ## [Last step: Setting up dualboot](/guide/dualboot.md)
 
